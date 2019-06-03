@@ -69,12 +69,12 @@ $(function() {
 
 // sidebar action
 $(function() {
-  
+
   var getSubMenuHTML = function(numberOfRecords) {
-    if ( numberOfRecords < 1 ) { 
-      return ''; 
+    if ( numberOfRecords < 1 ) {
+      return '';
     } else {
-      return  $("<span class='nav-list-record-count badge'>" + numberOfRecords + "</span>") 
+      return  $("<span class='nav-list-record-count badge'>" + numberOfRecords + "</span>")
      }
   };
 
