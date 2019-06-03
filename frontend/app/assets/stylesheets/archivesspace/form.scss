@@ -64,7 +64,7 @@ fieldset {
   }
   .note-outline-levels {
     .subrecord-form {
-      .box-shadow(none);
+      @include box-shadow(none);
       margin: 0;
     }
     .subrecord-form-fields {
@@ -173,7 +173,7 @@ form .form-group {
 
 .record-pane h3 {
   background-color: #F6F6F6;
-  #gradient > .vertical(#F3F3F3, #EDEDED);
+  #gradient > @include vertical(#F3F3F3, #EDEDED);
   border-bottom: 1px solid #DDD;
   padding-left: 10px;
   line-height: 1.4;
@@ -207,7 +207,7 @@ section h3 {
 
 .record-pane section section h4 {
   background-color: #F6F6F6;
-  #gradient > .vertical(#F3F3F3, #EDEDED);
+  #gradient > @include vertical(#F3F3F3, #EDEDED);
   border-bottom: 1px solid #DDD;
   padding-left: 10px;
   line-height: 36px;
@@ -233,18 +233,18 @@ section h3 {
   clear: both;
   margin: 20px 0;
   background-color: #FAFAFA;
-  .box-shadow(~"1px 1px 3px rgba(0, 0, 0, 0.25)");
+  @include box-shadow(#{"1px 1px 3px rgba(0, 0, 0, 0.25)"});
 
   .subrecord-form-heading {
     background-color: #F6F6F6;
-    #gradient > .vertical(#F3F3F3, #EDEDED);
+    #gradient > @include vertical(#F3F3F3, #EDEDED);
     border-bottom: 1px solid #DDD;
     padding-left: 10px;
 
     min-height: 1.4em;
     margin: 0;
     border-bottom: 1px solid #DDD;
-    .border-radius(4px 4px 0 0);
+    @include border-radius(4px 4px 0 0);
 
     .btn-group.pull-right {
       margin: 0px 6px 0 0;
@@ -302,7 +302,7 @@ section h3 {
     .subrecord-form-fields {
       background-color: #FFF;
       border: 1px solid #DDD;
-      .border-radius(4px);
+      @include border-radius(4px);
       margin-top: 10px;
       padding: 10px;
 
@@ -409,12 +409,12 @@ ul.subrecord-form-list {
     cursor: pointer;
     .icon-chevron-down {
       vertical-align: top;
-      .opacity(25);
+      @include opacity(25);
       margin-left: 5px;
     }
     &:hover {
       .icon-chevron-down {
-        .opacity(50);
+        @include opacity(50);
       }
     }
   }
@@ -440,33 +440,33 @@ ul.subrecord-form-list {
 
   &:last-child {
     .btn {
-      .border-radius(0 4px 4px 0);
+      @include border-radius(0 4px 4px 0);
     }
   }
 
   &:first-child {
     .btn {
-      .border-radius(4px 0 0 4px);
+      @include border-radius(4px 0 0 4px);
     }
   }
 
   &:last-child:first-child {
     .btn {
-      .border-radius(4px);
+      @include border-radius(4px);
     }
   }
 }
 
 .CodeMirror {
-  #font > .shorthand(@baseFontSize,normal,@baseLineHeight);
+  #font > @include shorthand($baseFontSize,normal,$baseLineHeight);
   margin-bottom: 9px;
-  font-size: @baseFontSize;
-  line-height: @baseLineHeight;
-  color: @gray;
-  .border-radius(4px);
-  background-color: @inputBackground;
-  border: 1px solid @inputBorder;
-  .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  color: $gray;
+  @include border-radius(4px);
+  background-color: $inputBackground;
+  border: 1px solid $inputBorder;
+  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
   overflow: visible;
 
   .CodeMirror-scroll {
@@ -479,7 +479,7 @@ ul.subrecord-form-list {
     z-index: 10;
     min-width: 336px;
     display: none;
-    font-family: @baseFontFamily;
+    font-family: $baseFontFamily;
     .arrow {
       left: 25%;
     }
@@ -491,7 +491,7 @@ ul.subrecord-form-list {
     padding: 0 10px;
     font-size: 0.9em;
     border-top: 1px solid #CCC;
-    font-family: @baseFontFamily;
+    font-family: $baseFontFamily;
   }
 
 }
@@ -510,15 +510,15 @@ ul.subrecord-form-list {
 
     > .CodeMirror {
       border: none;
-      border-top: 1px solid @inputBorder;
+      border-top: 1px solid $inputBorder;
       margin: 35px 0 0 0;
-      .border-radius(0);
+      @include border-radius(0);
     }
   }
 }
 
 .CodeMirror-completions {
-  .box-shadow(0 5px 10px rgba(0,0,0,.2));
+  @include box-shadow(0 5px 10px rgba(0,0,0,.2));
   border: 1px solid #ccc;
   border: 1px solid rgba(0,0,0,.2);
 }
@@ -539,8 +539,8 @@ ul.subrecord-form-list {
     background-color: #F3F3F3;
     padding: 4px;
     width: 300px;
-    .border-radius(4px 4px 0 0);
-    border: 1px solid @inputBorder;
+    @include border-radius(4px 4px 0 0);
+    border: 1px solid $inputBorder;
     border-bottom: none;
 
 
@@ -552,22 +552,22 @@ ul.subrecord-form-list {
     clear: both;
     display: block;
     width: 310px;
-    .border-radius(0 0 4px 4px);
+    @include border-radius(0 0 4px 4px);
   }
 }
 
 .subrecord-add-as-you-go-actions {
-  @asyougotransition: opacity linear .4s 1s, height linear .4s 1s, padding linear .4s 1s;
-  .transition(@asyougotransition);
+  $asyougotransition: opacity linear .4s 1s, height linear .4s 1s, padding linear .4s 1s;
+  @include transition($asyougotransition);
   text-align: center;
   width: 100%;
-  .opacity(0);
+  @include opacity(0);
   height: 30px;
   overflow: hidden;
   border-top: 1px solid transparent;
 
   a {
-    .transition(background-color linear .1s);
+    @include transition(background-color linear .1s);
     font-size: 30px;
     display: inline-block;
     text-shadow: 0px 1px 1px #666;
@@ -584,25 +584,25 @@ ul.subrecord-form-list {
     }
 
     &:hover, &:focus {
-      .transition(background-color linear .1s);
-      background-color: @btnBackgroundHighlight;
-      #gradient > .vertical(@btnBackground, @btnBackgroundHighlight);
+      @include transition(background-color linear .1s);
+      background-color: $btnBackgroundHighlight;
+      #gradient > @include vertical($btnBackground, $btnBackgroundHighlight);
     }
 
     &:active {
       background-image: none;
       outline: 0;
       background-color: #EEE;
-      .box-shadow(~"inset 0 1px 2px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
+      @include box-shadow(#{"inset 0 1px 2px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)"});
     }
   }
 }
 
 .subrecord-form:hover .subrecord-add-as-you-go-actions,
 .focus .subrecord-add-as-you-go-actions {
-  @asyougotransition: opacity linear .2s, height linear .2s, padding linear .2s;
-  .transition(@asyougotransition);
-  .opacity(100);
+  $asyougotransition: opacity linear .2s, height linear .2s, padding linear .2s;
+  @include transition($asyougotransition);
+  @include opacity(100);
   border-top: 1px solid #EEE;
 }
 
@@ -610,10 +610,10 @@ ul.subrecord-form-list {
   border-left: none;
   border-right: none;
   border-bottom: none;
-  .border-radius(0 0 4px 4px);
+  @include border-radius(0 0 4px 4px);
 
   > .subrecord-form-heading {
-    .border-radius(0);
+    @include border-radius(0);
   }
 }
 
@@ -643,8 +643,8 @@ label {
     margin-right: 4px;
     min-width: 60px;
     float: left;
-    height: @baseLineHeight;
-    line-height: @baseLineHeight;
+    height: $baseLineHeight;
+    line-height: $baseLineHeight;
   }
 }
 
@@ -668,7 +668,7 @@ label {
   padding: 4px;
   margin-right: 4px;
   float: right;
-  line-height: @baseLineHeight;
+  line-height: $baseLineHeight;
 }
 
 .transfer-form, .merge-form, .add-event-form {

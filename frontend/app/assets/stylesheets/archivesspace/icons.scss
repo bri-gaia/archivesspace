@@ -8,7 +8,7 @@
 }
 
 .icomoon {
-  .icon('icomoon');
+  @include icon('icomoon');
   margin: 0px 2px 0 0;
 
   &.icon-resource:before {

@@ -79,7 +79,7 @@
 
 #job_filenames_.error {
   #files {
-    border-color: @errorBackground;
+    border-color: $errorBackground;
   }
 }
 
@@ -91,7 +91,7 @@
 .job-status-completed {
   .job-status {
     .controls {
-      color: @successText;
+      color: $successText;
     }
   }
 }
@@ -104,21 +104,21 @@
 .job-status-queued {
   .job-status {
     .controls {
-      color: @warningText;
+      color: $warningText;
     }
   }
 }
 .job-status-running {
   .job-status {
     .controls {
-      color: @infoText;
+      color: $infoText;
     }
   }
 }
 .job-status-failed {
   .job-status {
     .controls {
-      color: @errorText;
+      color: $errorText;
     }
   }
 }

@@ -1,10 +1,10 @@
 /* Styles to support sortable tables */
 table {
   thead {
-    #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+    #gradient > @include vertical($navbarBackgroundHighlight, $navbarBackground);
     th {
       &.highlighted {
-        #gradient > .vertical(#f0f7fa, #dcf1fa);
+        #gradient > @include vertical(#f0f7fa, #dcf1fa);
       }
 
       &.required {
@@ -45,10 +45,10 @@ table {
     background-color: #fff;
   }
   tr.deleted td {
-    background-color: @errorBackground !important;
+    background-color: $errorBackground !important;
   }
   tr.selected td {
-    background-color: @successBackground !important;
+    background-color: $successBackground !important;
   }
   dl {
     margin: 0;
@@ -56,8 +56,8 @@ table {
   td {
     /* background-color: #FFF; */
     &.has-error {
-      background-color: @errorBackground !important;
-      color: @errorText;
+      background-color: $errorBackground !important;
+      color: $errorText;
     }
     /* allow break of words to ensure table doesn't expand beyond layout */
     word-break: break-word;
@@ -96,28 +96,28 @@ table.table-sortable {
         }
       }
       &:hover {
-        background-color: @tableBackgroundHover;
+        background-color: $tableBackgroundHover;
       }
     }
     th.sort-desc {
-      #gradient > .vertical(#f0f7fa, #dcf1fa);
+      #gradient > @include vertical(#f0f7fa, #dcf1fa);
 
       > a {
         padding-right: 15px;
         &::after {
           visibility:visible;
-          .opacity(60);
+          @include opacity(60);
         }
       }
     }
     th.sort-asc {
-      #gradient > .vertical(#f0f7fa, #dcf1fa);
+      #gradient > @include vertical(#f0f7fa, #dcf1fa);
 
       > a {
         padding-right: 20px;
         &::after {
           visibility:visible;
-          .opacity(60);
+          @include opacity(60);
           border-bottom:none !important;
           border-left:4px solid transparent  !important;
           border-right:4px solid transparent  !important;

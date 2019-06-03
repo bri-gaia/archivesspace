@@ -7,7 +7,7 @@
   padding: 10px 0 10px 0;
   position: relative;
   background-color: #F3F3F3;
-  #gradient > .vertical(#F3F3F3, #EDEDED);
+  #gradient > @include vertical(#F3F3F3, #EDEDED);
   border-top: 1px solid #EEE;
   border-bottom: 1px solid #FFF;
   overflow: visible;
@@ -27,7 +27,7 @@
 
   .expand-tree:hover,
   .retract-tree:hover {
-    .opacity(100);
+    @include opacity(100);
   }
 
   .retract-tree {
@@ -85,8 +85,8 @@
 
 
 .archives-tree-container.expanded {
-  .box-shadow(1px 1px 5px rgba(0, 0, 0, 0.4));
-  .opacity(95);
+  @include box-shadow(1px 1px 5px rgba(0, 0, 0, 0.4));
+  @include opacity(95);
   z-index: 1000;
   background-color: #f9f9f9;
 
@@ -112,8 +112,8 @@
   margin-left: -150px;
   text-align: center;
   padding-top: 1em;
-  .opacity(95);
-  .box-shadow(3px 3px 10px rgba(0, 0, 0, 0.6));
+  @include opacity(95);
+  @include box-shadow(3px 3px 10px rgba(0, 0, 0, 0.6));
   z-index: 1;
 }
 

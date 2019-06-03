@@ -24,7 +24,7 @@
 .input-group .dropdown-menu,
 .btn-group .dropdown-menu
 .input-prepend .dropdown-menu {
-  font-size: @baseFontSize;
+  font-size: $baseFontSize;
 }
 
 .dropdown-menu {
@@ -34,7 +34,7 @@
   }
 
   a.disabled, a[disabled="disabled"] {
-    .opacity(50);
+    @include opacity(50);
     &:hover {
       background: transparent !important;
       color: #333333 !important;

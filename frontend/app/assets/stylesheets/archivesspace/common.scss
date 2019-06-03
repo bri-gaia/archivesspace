@@ -5,7 +5,7 @@ body {
 }
 
 h2 > .label {
-  margin-top: @baseLineHeight / 2;
+  margin-top: $baseLineHeight / 2;
   vertical-align: top;
   font-size: 40%;
 }
@@ -38,7 +38,7 @@ h2 > .label {
 .tooltip {
   .tooltip-inner {
     text-align: left;
-    line-height: @baseLineHeight;
+    line-height: $baseLineHeight;
     font-weight: normal;
 
     .tooltip-close {
@@ -71,11 +71,11 @@ h2 > .label {
     right: 10px;
 
     .icon {
-      .opacity(25);
+      @include opacity(25);
     }
     &:hover {
       .icon {
-        .opacity(50);
+        @include opacity(50);
       }
     }
   }
@@ -88,24 +88,29 @@ td .btn-group {
 
 #font {
   #family {
-    .serif() {
-      font-family: @serifFontFamily;
+    @mixin serif()
+{
+      font-family: $serifFontFamily;
     }
-    .sans-serif() {
-      font-family: @sansFontFamily;
+    @mixin sans-serif()
+{
+      font-family: $sansFontFamily;
     }
-    .monospace() {
-      font-family: @monoFontFamily;
+    @mixin monospace()
+{
+      font-family: $monoFontFamily;
     }
   }
-  .shorthand(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
-    font-size: @size;
-    font-weight: @weight;
-    line-height: @lineHeight;
+  @mixin shorthand($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight)
+{
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
   }
-  .sans-serif(@size: @baseFontSize, @weight: normal, @lineHeight: @baseLineHeight) {
+  @mixin sans-serif($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight)
+{
     #font > #family > .sans-serif;
-    #font > .shorthand(@size, @weight, @lineHeight);
+    #font > @include shorthand($size, $weight, $lineHeight);
   }
 }
 

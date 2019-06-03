@@ -11,19 +11,19 @@ ul.token-input-list {
   padding: 0;
   list-style-type: none;
   
-  background-color: @inputBackground;
-  border: 1px solid @inputBorder;
-  .border-radius(4px);
-  .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
-  @transition: border linear .2s, box-shadow linear .2s;
-  .transition(@transition);
+  background-color: $inputBackground;
+  border: 1px solid $inputBorder;
+  @include border-radius(4px);
+  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  $transition: border linear .2s, box-shadow linear .2s;
+  @include transition($transition);
 
   // Focus state
   &:focus {
     border-color: rgba(82,168,236,.8);
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
-    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)");
+    @include box-shadow(#{"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)"});
   }
 }
 
@@ -32,7 +32,7 @@ ul.token-input-list {
 }
 
 .input-group ul.token-input-list  {
-  .border-radius(4px 0 0 4px);
+  @include border-radius(4px 0 0 4px);
   height: 100%;
 }
 
@@ -72,12 +72,12 @@ li.token-input-token {
   height: auto !important; 
   height: 1%;
   margin: 0 4px 4px 0;
-  #gradient > .vertical(#BEEBFF, #92ddff);
+  #gradient > @include vertical(#BEEBFF, #92ddff);
   border: 1px solid #99DEFD;
   padding: 2px;
   color: #555;
   display: block;
-  .border-radius(4px);
+  @include border-radius(4px);
 }
 
 li.token-input-token {
@@ -96,8 +96,8 @@ li.token-input-token {
   }
 
   &:hover {
-    #gradient > .vertical(#a4e3ff, #77d5ff);
-    .transition("linear .2s");
+    #gradient > @include vertical(#a4e3ff, #77d5ff);
+    @include transition("linear .2s");
   }
 }
 
@@ -242,7 +242,7 @@ div.token-input-dropdown ul li.token-input-selected-dropdown-item {
   .input-group-btn {
     float: left;
     .btn {
-      .border-radius(0 4px 4px 0);
+      @include border-radius(0 4px 4px 0);
     }
   }
 }
@@ -258,7 +258,7 @@ div.token-input-dropdown ul li.token-input-selected-dropdown-item {
   }
 
   .token-input-selected-token .icon-token {
-    .opacity(100);
+    @include opacity(100);
   }
 
   .agent_person .icon-token:before {
@@ -365,11 +365,11 @@ div.token-input-dropdown ul li.token-input-selected-dropdown-item {
   }
 
   .sortable-placeholder {
-    height: @baseLineHeight;
+    height: $baseLineHeight;
     border: 1px dashed #CCC;
     padding: 2px;
     margin: 4px;
-    .border-radius(4px);
+    @include border-radius(4px);
   }
 }
 .token-list {
