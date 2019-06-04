@@ -39,12 +39,12 @@ RSpec.configure do |config|
   config.include Capybara::DSL
 end
 
-# We use the Mizuno server.
-Capybara.register_server :mizuno do |app, port, host|
-  require 'rack/handler/mizuno'
-  Rack::Handler.get('mizuno').run(app, port: port, host: host)
+# We use the Puma server.
+Capybara.register_server :puma do |app, port, host|
+  require 'rack/handler/puma'
+  Rack::Handler::Puma.run(app, port: port, host: host)
 end
-Capybara.server = :mizuno
+Capybara.server = :puma
 
 def finished_all_ajax_requests?
   request_count = page.evaluate_script('$.active').to_i

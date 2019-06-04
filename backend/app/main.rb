@@ -66,12 +66,12 @@ class ArchivesSpaceService < Sinatra::Base
     config.dont_reload File.join("**", "exporters", "*.rb")
     config.dont_reload File.join("**", "spec", "*.rb")
 
-    set :server, :mizuno
+    set :server, :puma
     set :server_settings, {:reuse_address => true}
   end
 
   configure :test do |config|
-    set :server, :mizuno
+    set :server, :puma
   end
 
 
@@ -309,15 +309,15 @@ class ArchivesSpaceService < Sinatra::Base
 
 
   get '/' do
-    sys_info =  DB.sysinfo.merge({ "archivesSpaceVersion" =>  ASConstants.VERSION}) 
-    
+    sys_info =  DB.sysinfo.merge({ "archivesSpaceVersion" =>  ASConstants.VERSION})
+
     request.accept.each do |type|
         case type
           when 'application/json'
-            content_type :json 
+            content_type :json
             halt sys_info.to_json
         end
-    end  
+    end
     JSON.pretty_generate(sys_info )
   end
 
