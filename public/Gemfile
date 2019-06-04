@@ -3,10 +3,10 @@ source 'https://rubygems.org'
 gem 'rails', '5.2.3'
 
 gem 'loofah', '>= 2.2.3'
-gem "i18n"
+gem 'i18n', '1.6.0'
 gem 'rubyzip', '~> 1.2.2'
 
-gem 'nokogiri'
+gem 'nokogiri', '1.10.3'
 
 gem 'sprockets-rails'
 
@@ -33,6 +33,7 @@ gem "json", "1.8.6"
 gem 'json-schema', '1.0.10'
 gem "net-http-persistent", "2.8"
 gem "multipart-post", "1.2.0"
+gem 'rack-test', '~> 1.1.0'
 
 # support clipboard
 gem 'clipboard-rails'

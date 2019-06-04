@@ -7,7 +7,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     atomic (1.0.1-java)
-    backports (3.14.0)
+    backports (3.15.0)
     builder (3.2.3)
     concurrent-ruby (1.1.5)
     excon (0.64.0)
@@ -27,7 +27,7 @@ GEM
       fog-core
       nokogiri (>= 1.5.11, < 2.0.0)
     formatador (0.2.5)
-    i18n (0.9.1)
+    i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     ipaddress (0.8.3)
     json (1.8.6-java)
@@ -36,12 +36,12 @@ GEM
     mime-types-data (3.2019.0331)
     minitest (5.11.3)
     multi_json (1.13.1)
-    nokogiri (1.8.5-java)
+    nokogiri (1.10.3-java)
     rack (1.6.11)
     rack-protection (1.5.5)
       rack
-    rack-test (0.6.3)
-      rack (>= 1.0)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -64,13 +64,14 @@ PLATFORMS
 DEPENDENCIES
   activesupport (= 5.2.3)
   atomic (= 1.0.1)
+  backports (~> 3.14)
   fog-aws (= 2.0.0)
-  i18n
+  i18n (= 1.6.0)
   json (= 1.8.6)
   mime-types (= 3.1)
   multi_json (~> 1.13.1)
-  nokogiri
-  rack-test (~> 0.6.3)
+  nokogiri (= 1.10.3)
+  rack-test (~> 1.1.0)
   sinatra (= 1.4.7)
   sinatra-contrib (= 1.4.7)
 

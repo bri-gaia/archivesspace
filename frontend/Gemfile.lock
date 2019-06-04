@@ -235,7 +235,7 @@ DEPENDENCIES
   coffee-script
   coffee-script-source
   factory_bot (~> 4.11, >= 4.11.1)
-  i18n
+  i18n (= 1.6.0)
   jquery-rails
   jquery-ui-rails
   jruby-jars (= 9.2.6.0)
@@ -245,12 +245,13 @@ DEPENDENCIES
   multi_json (~> 1.13.1)
   multipart-post (= 1.2.0)
   net-http-persistent (= 2.8)
-  nokogiri
+  nokogiri (= 1.10.3)
   parallel_tests (~> 2.14.0)
   pry-debugger-jruby
   pry-nav
   pry-rails
   puma (~> 3.12, >= 3.12.1)
+  rack-test (~> 1.1.0)
   rails (= 5.2.3)
   rails-html-sanitizer (~> 1.0.4)
   rspec (~> 3.6.0)

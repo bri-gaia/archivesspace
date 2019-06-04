@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '5.2.3'
 
 gem 'loofah', '>= 2.2.3'
-gem "i18n"
+gem 'i18n', '1.6.0'
 gem 'rails-html-sanitizer', '~> 1.0.4'
 gem 'sprockets-rails'
 
@@ -29,6 +29,7 @@ gem 'json-schema', '1.0.10'
 gem "jruby-jars", "= 9.2.6.0"
 gem 'atomic', '= 1.0.1'
 gem 'unicode-display_width', '~> 1.6'
+gem 'rack-test', '~> 1.1.0'
 
 group :test do
   gem 'rspec', "~> 3.6.0"
@@ -61,7 +62,7 @@ gem 'multi_json', '~> 1.13.1'
 gem 'rubyzip', '~> 1.2.2'
 gem "zip-zip", "0.3"
 
-gem 'nokogiri'
+gem 'nokogiri', '1.10.3'
 
 
 require 'asutils'

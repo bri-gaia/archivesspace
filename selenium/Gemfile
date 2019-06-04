@@ -2,9 +2,9 @@ source "https://rubygems.org"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "i18n"
+gem 'i18n', '1.6.0'
 
-gem 'nokogiri'
+gem 'nokogiri', '1.10.3'
 
 group :test do
   gem "json", "1.8.6"

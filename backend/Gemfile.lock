@@ -64,8 +64,8 @@ GEM
     rack-session-sequel (0.0.1)
       rack
       sequel
-    rack-test (0.6.3)
-      rack (>= 1.0)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     rainbow (3.0.0)
     rake (12.3.2)
     rjack-jackson (1.8.11.0-java)
@@ -142,10 +142,11 @@ PLATFORMS
 DEPENDENCIES
   activesupport (= 5.2.3)
   atomic (= 1.0.1)
+  backports (~> 3.14)
   bcrypt (= 3.1.7)
   childprocess (~> 0.5)
   factory_bot (~> 4.11, >= 4.11.1)
-  i18n
+  i18n (= 1.6.0)
   jdbc-derby (= 10.12.1.1)
   jdbc-mysql (= 5.1.13)
   jruby-jars (= 9.2.6.0)
@@ -156,14 +157,14 @@ DEPENDENCIES
   multipart-post (= 1.2.0)
   net-http-persistent (= 2.8)
   net-ldap (~> 0.16.0)
-  nokogiri
+  nokogiri (= 1.10.3)
   oai (= 0.4.0)
   pry
   pry-debugger-jruby
   pry-nav
   puma (~> 3.12, >= 3.12.1)
   rack-session-sequel (= 0.0.1)
-  rack-test (~> 0.6.3)
+  rack-test (~> 1.1.0)
   rjack-jackson (= 1.8.11.0)
   rrtf
   rspec (~> 3.6.0)

@@ -305,7 +305,7 @@ DEPENDENCIES
   factory_bot_rails (~> 4.11, >= 4.11.1)
   fog-aws (= 2.0.0)
   font-awesome-sass (~> 5.8.1)
-  i18n
+  i18n (= 1.6.0)
   jquery-rails
   json (= 1.8.6)
   json-schema (= 1.0.10)
@@ -314,11 +314,12 @@ DEPENDENCIES
   loofah (>= 2.2.3)
   multipart-post (= 1.2.0)
   net-http-persistent (= 2.8)
-  nokogiri
+  nokogiri (= 1.10.3)
   pry-debugger-jruby
   pry-nav
   pry-rails
   puma (~> 3.12, >= 3.12.1)
+  rack-test (~> 1.1.0)
   rails (= 5.2.3)
   rails-controller-testing
   rspec (~> 3.6.0)
