@@ -98,7 +98,7 @@ RSpec.configure do |config|
 
   config.include FactoryBot::Syntax::Methods
   config.include BackendClientMethods
-  
+
   # show retry status in spec process
   config.verbose_retry = true
   # Try thrice (retry twice)
@@ -130,9 +130,6 @@ RSpec.configure do |config|
     $server_pids.each do |pid|
       TestUtils::kill(pid)
     end
-    # For some reason we have to manually shutdown mizuno for the test suite to
-    # quit.
-    Rack::Handler.get('mizuno').instance_variable_get(:@server) ? Rack::Handler.get('mizuno').instance_variable_get(:@server).stop : next
   end
 
 end
