@@ -30,7 +30,7 @@ GEM
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     ipaddress (0.8.3)
-    json (1.8.6-java)
+    json (2.1.0-java)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.0331)
@@ -67,7 +67,7 @@ DEPENDENCIES
   backports (~> 3.14)
   fog-aws (= 2.0.0)
   i18n (= 1.6.0)
-  json (= 1.8.6)
+  json (= 2.1.0)
   mime-types (= 3.1)
   multi_json (~> 1.13.1)
   nokogiri (= 1.10.3)
@@ -76,4 +76,4 @@ DEPENDENCIES
   sinatra-contrib (= 1.4.7)
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
