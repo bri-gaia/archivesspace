@@ -895,7 +895,7 @@
       <header trimleading="yes">
       // DON'T EDIT THIS FILE -- the canonical version is under the frontend project
       </header>
-      <fileset file="../frontend/app/assets/stylesheets/archivesspace/largetree.less" />
+      <fileset file="../frontend/app/assets/stylesheets/archivesspace/largetree.scss" />
     </concat>
 
   </target>
