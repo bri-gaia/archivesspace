@@ -88,8 +88,8 @@ ArchivesSpace::Application.configure do
   config.assets.precompile << /\.(?:svg|eot|woff|woff2|ttf)\z/
   config.assets.precompile << /\.(?:crud.js|index.js|show.js|batch.js)\z/
   config.assets.precompile << 'html5shiv.js'
-  config.assets.precompile << 'codemirror/codemirror.less'
-  config.assets.precompile << 'codemirror/util/simple-hint.less'
+  config.assets.precompile << 'codemirror/codemirror.css'
+  config.assets.precompile << 'codemirror/addon/hint/show-hint.css'
   config.assets.precompile << 'css-spinners/spinner'
   config.assets.precompile << 'bootstrap-select/bootstrap-select'
   config.assets.precompile << /jquery.kiketable/
