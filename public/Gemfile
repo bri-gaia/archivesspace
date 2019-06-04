@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.7.2'
+gem 'rails', '5.2.3'
 
 gem 'loofah', '>= 2.2.3'
-gem "i18n", "0.9.1"
+gem "i18n"
 gem 'rubyzip', '~> 1.2.2'
 
-gem 'nokogiri', '1.8.5'
+gem 'nokogiri'
 
-gem 'sprockets-rails', '2.3.3'
+gem 'sprockets-rails'
 
 gem "mizuno", "0.6.11"
 gem 'atomic', '= 1.0.1'
@@ -20,10 +20,10 @@ gem 'sassc-rails', '~> 2.1', '>= 2.1.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '3.0.4'
 # Use font-awesome icons
-gem 'font-awesome-sass', '= 5.0.6'
+gem 'font-awesome-sass', '~> 5.8.1'
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '4.2.1'
+gem 'coffee-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyrhino'
 # Use jquery as the JavaScript library

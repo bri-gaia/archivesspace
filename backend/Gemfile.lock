@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.0.7.2)
+    activesupport (5.2.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -25,7 +25,7 @@ GEM
       faraday (>= 0.7.4, < 1.0)
     fastimage (2.1.5)
     ffi (1.11.1-java)
-    i18n (0.9.1)
+    i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     jdbc-derby (10.12.1.1)
     jdbc-mysql (5.1.13)
@@ -45,7 +45,7 @@ GEM
     multipart-post (1.2.0)
     net-http-persistent (2.8)
     net-ldap (0.16.1)
-    nokogiri (1.8.5-java)
+    nokogiri (1.10.3-java)
     oai (0.4.0)
       builder (>= 3.1.0)
       faraday
@@ -145,12 +145,12 @@ PLATFORMS
   java
 
 DEPENDENCIES
-  activesupport (= 5.0.7.2)
+  activesupport (= 5.2.3)
   atomic (= 1.0.1)
   bcrypt (= 3.1.7)
   childprocess (~> 0.5)
   factory_bot (~> 4.11, >= 4.11.1)
-  i18n (= 0.9.1)
+  i18n
   jdbc-derby (= 10.12.1.1)
   jdbc-mysql (= 5.1.13)
   jruby-jars (= 9.2.6.0)
@@ -162,7 +162,7 @@ DEPENDENCIES
   multipart-post (= 1.2.0)
   net-http-persistent (= 2.8)
   net-ldap (~> 0.16.0)
-  nokogiri (= 1.8.5)
+  nokogiri
   oai (= 0.4.0)
   pry
   pry-debugger-jruby
