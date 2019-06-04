@@ -10,7 +10,7 @@ gem 'nokogiri'
 
 gem 'sprockets-rails'
 
-gem "mizuno", "0.6.11"
+gem 'puma', '~> 3.12', '>= 3.12.1'
 gem 'atomic', '= 1.0.1'
 
 # use bootstrap4

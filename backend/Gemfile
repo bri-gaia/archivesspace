@@ -18,7 +18,7 @@ gem 'tzinfo'
 gem "rufus-scheduler", "~> 2.0.24"
 gem "rufus-lru", "1.0.5"
 gem "net-ldap", '~> 0.16.0'
-gem "mizuno", "0.6.11"
+gem 'puma', '~> 3.12', '>= 3.12.1'
 gem "i18n"
 gem 'childprocess', '~>0.5'
 
