@@ -9,6 +9,8 @@ gem 'sprockets-rails'
 
 gem 'tzinfo-data'
 
+gem 'csv', '~> 3.0'
+
 # Gems used only for assets and not required
 # in production environments by default.
 gem 'sassc-rails', '~> 2.1', '>= 2.1.1'
