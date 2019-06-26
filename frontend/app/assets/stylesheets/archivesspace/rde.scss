@@ -3,13 +3,13 @@
 
 #rde_form {
   .sections {
-    #gradient > @include vertical($navbarBackgroundHighlight, darken($navbarBackgroundHighlight, 3%));
+    #gradient > { @include vertical($navbarBackgroundHighlight, darken($navbarBackgroundHighlight, 3%)); }
     th {
       border-bottom-color: darken($navbarBackgroundHighlight, 6%);
     }
   }
   .fieldset-labels {
-    #gradient > @include vertical(darken($navbarBackgroundHighlight, 3%), darken($navbarBackgroundHighlight, 6%));
+    #gradient > { @include vertical(darken($navbarBackgroundHighlight, 3%), darken($navbarBackgroundHighlight, 6%)); }
 
     th {
       border-top-color: darken($navbarBackgroundHighlight, 6%);
@@ -22,7 +22,7 @@
         &:before {
           // apply required icon to the inner kiketable container
           display: none;
-        } 
+        }
         .kiketable-th-text {
           background-image: asset-url('archivesspace/required_loud.png');
           background-repeat: no-repeat;
@@ -53,7 +53,7 @@
     }
 
     &.sticky {
-      #gradient > @include vertical(#dcf1fa, #caecfa);
+      #gradient > { @include vertical(#dcf1fa, #caecfa); }
     }
 
     /* Fix https://archivesspace.atlassian.net/browse/AR-1211 */
