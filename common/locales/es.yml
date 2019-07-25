@@ -1666,6 +1666,7 @@ es:
     publish: ¿Publicar?
     publish_tooltip: |
         <p>Determina si este Repositorio y cualquier registro que contenga se publicarán en interfaces públicas (usuarios).</p>
+    naan: Name Assigning Authority Number
 
   term: &term_attributes
     # tooltips not displaying:

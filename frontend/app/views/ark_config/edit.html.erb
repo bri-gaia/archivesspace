@@ -1,0 +1,33 @@
+<%= setup_context(:title => I18n.t("ark_config.title")) %>
+
+<%= form_for @ark_config, :as => "ark_config", :url => {:action => :update}, :html => {:class => 'form-horizontal aspace-record-form'} do |f| %>
+
+  <% form_context :ark_config, @ark_config do |form| %>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-9">
+        <div class="record-pane">
+          <h2><%= I18n.t("ark_config.title") %></h2>
+
+          <%= render_aspace_partial :partial => "shared/form_messages", :locals => {:object => @ark_config, :form => form} %>
+          <fieldset>
+              <section id="ark_config">
+                <h3><%= I18n.t("ark_config.general_section") %></h3>
+                <%= form.label_and_boolean "arks_enabled", {}, form.default_for("arks_in_all_exports") %>
+                <%= form.label_and_textfield "default_naan", :require => true %>
+                <%= form.label_and_textfield "ark_url_prefix", :require => true %>
+                <%= form.label_and_boolean "arks_in_all_exports", { :readonly => !form.obj["arks_enabled"] }, form.default_for("arks_in_all_exports") %>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary"><%= I18n.t("ark_config._frontend.action.create") %></button>
+                </div>
+
+              </section>
+          </fieldset>
+
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+<% end %>

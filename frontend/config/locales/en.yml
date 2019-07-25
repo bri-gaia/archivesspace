@@ -301,6 +301,7 @@ en:
     plugins: Plug-ins
     repositories_manage: Manage Repositories
     oai_config: Manage OAI-PMH Settings
+    ark_config: Manage ARK Settings
     manage_groups: Manage Groups
     manage_users: Manage Users
     manage_container_profiles: Manage Container Profiles
@@ -1491,3 +1492,19 @@ en:
         _plural: Sponsor Sets
       repo_settings:
         _plural: Per Repository OAI-PMH Settings
+
+  ark_config:
+    title: ARK Settings
+    title_repo_section: Per Repository ARK Settings
+    general_section: General Settings
+    arks_enabled: Enable ARKs?
+    default_naan: Default Name Assigning Authority Number
+    ark_url_prefix: URL prefix to use for ARK URLs
+    arks_in_all_exports: Include ARKs in all exports
+    ark_leave_repo_form: These options affect ARK for this repository only. Click below to view/edit global ARK options. This will leave current form without saving changes.
+    _frontend:
+      section:
+        basic_information: General Settings
+      action:
+        create: Update ARK Settings
+        updated: ARK settings successfully updated!

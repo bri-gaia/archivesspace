@@ -23,6 +23,11 @@
       "oai_is_disabled" => {"type" => "boolean"},
       "oai_sets_available" => {"type" => "string"},
 
+      "arks_enabled" => {"type" => "boolean", "default" => false},
+      "naan" => {"type" => "string"},
+      "ark_url_prefix" => {"type" => "string"},
+      "arks_in_all_exports" => {"type" => "boolean", "default" => false},
+
       "slug" => {"type" => "string"},
       "is_slug_auto" => {"type" => "boolean", "default" => true},
 

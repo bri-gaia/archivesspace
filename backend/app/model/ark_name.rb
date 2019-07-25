@@ -68,7 +68,12 @@ class ARKName < Sequel::Model(:ark_name)
       if external_url
         return external_url
       else
-        return "#{AppConfig[:ark_url_prefix]}/ark:/#{AppConfig[:ark_naan]}/#{ark.id}"
+        repository = Repository.to_jsonmodel(RequestContext.get(:repo_id))
+        if repository[:naan].nil?
+          return "#{AppConfig[:ark_url_prefix]}/ark:/#{AppConfig[:ark_naan]}/#{ark.id}"
+        else
+          return "#{AppConfig[:ark_url_prefix]}/ark:/#{repository[:naan]}/#{ark.id}"
+        end
       end
     else
       return nil

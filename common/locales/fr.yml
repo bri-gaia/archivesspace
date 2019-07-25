@@ -1684,7 +1684,7 @@ fr:
     publish: Publier?
     publish_tooltip: |
         <p>Détermine si ce service d'archives et les notices qu'il peut contenir seront publiés sur les interfaces publiques.</p>
-
+    naan: Name Assigning Authority Number
 
   term: &term_attributes
     # tooltips not displaying

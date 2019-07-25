@@ -129,4 +129,35 @@ describe 'ARKName model' do
     ao.delete
   end
 
+  it "uses repository naan if it exists" do
+    repo = create(:repo_with_naan)
+
+    JSONModel::set_repository(repo.id)
+    RequestContext.put(:repo_id, repo.id)
+
+    resource = Resource.create_from_json(build(:json_resource,
+                                     {
+                                       :id_0 => "1234",
+                                       :id_1 => "5678",
+                                       :id_2 => "9876",
+                                       :id_3 => "5432"
+                                     }),
+                               :repo_id => repo.id)
+
+    ark = ARKName.first(:resource_id => resource.id)
+
+    expect(ARKName::get_ark_url(resource.id, :resource)).to eq("#{AppConfig[:ark_url_prefix]}/ark:/#{repo[:naan]}/#{ark.id}")
+
+    resource.delete
+  end
+
+  it "uses AppConfig[:ark_naan] if there is no repository naan" do
+    opts = {:title => generate(:generic_title)}
+    resource = create_resource(opts)
+    ark = ARKName.first(:resource_id => resource.id)
+
+    expect(ARKName::get_ark_url(resource.id, :resource)).to eq("#{AppConfig[:ark_url_prefix]}/ark:/#{AppConfig[:ark_naan]}/#{ark.id}")
+
+    resource.delete
+  end
 end

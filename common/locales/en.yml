@@ -1684,7 +1684,7 @@ en:
     publish: Publish?
     publish_tooltip: |
         <p>Determines whether this Repository and any record it contains will be published to public (patron) interfaces.</p>
-
+    naan: Name Assigning Authority Number
 
   term: &term_attributes
     # tooltips not displaying
@@ -2010,7 +2010,7 @@ en:
     sponsor_set_desc_required: Sponsor set description is required for creating an OAI sponsor set
     sponsor_set_name_required: Sponsor set name is required for creating an OAI sponsor set
     invalid_characters: Contains invalid characters
-
+    must_be_a_valid_url: Must be a valid URL
 
   job:
     _singular: Background Job

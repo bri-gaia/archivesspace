@@ -57,6 +57,24 @@ FactoryBot.define do
       end
     end
 
+    factory :repo_with_naan, class: Repository do
+      json_schema_version { 1 }
+      repo_code { generate(:repo_code) }
+      name { generate(:generic_description) }
+      agent_representation_id { 1 }
+      org_code { generate(:alphanumstr) }
+      image_url { generate(:url) }
+      publish { 1 }
+      country { 'US' }
+      naan { generate(:alphanumstr) }
+      after(:create) do |r|
+        $repo_id = r.id
+        $repo = JSONModel.JSONModel(:repository).uri_for(r.id)
+        JSONModel.set_repository($repo_id)
+        RequestContext.put(:repo_id, $repo_id)
+      end
+    end
+
     factory :agent_corporate_entity, class: AgentCorporateEntity do
       json_schema_version { 1 }
       after(:create) do |a|
@@ -875,4 +893,12 @@ FactoryBot.define do
     oai_admin_email { 'oairecord@example.org' }
     oai_repository_name { 'ArchivesSpace OAI Repo' }
   end
+
+  factory :json_ark_config, class: JSONModel(:ark_config) do
+    arks_enabled { false }
+    default_naan { generate(:alphanumstr) }
+    ark_url_prefix { generate(:url) }
+    arks_in_all_exports { false }
+  end
+
 end

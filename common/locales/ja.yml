@@ -1265,6 +1265,7 @@ ja:
     publish: 公開しますか？
     publish_tooltip: "<p>このリポジトリとそれに含まれるレコードがパブリック（パトロン）インターフェイスに公開されるかどうかを決定します。
       </p>"
+    naan: Name Assigning Authority Number
 
   term: &term_attributes
     term: 期間
