@@ -6,10 +6,10 @@ Sequel.migration do
     create_table(:ark_config) do
       primary_key :id
 
-      Integer :arks_enabled
+      Boolean :arks_enabled
       String :default_naan
       String :ark_url_prefix
-      Integer :arks_in_all_exports
+      Boolean :arks_in_all_exports
 
       String :created_by
       String :last_modified_by

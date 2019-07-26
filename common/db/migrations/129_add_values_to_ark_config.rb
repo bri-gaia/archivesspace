@@ -6,10 +6,10 @@ Sequel.migration do
   up do
 
     $stderr.puts("Adding dafault values to ARK config table")
-    arks_enabled = 0
+    arks_enabled = false
     default_naan = 'f000001'
     ark_url_prefix = AppConfig[:public_proxy_url]
-    arks_in_all_exports = 0
+    arks_in_all_exports = false
 
     self[:ark_config].insert(:arks_enabled        => arks_enabled,
                              :default_naan        => default_naan,
